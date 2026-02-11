@@ -42,13 +42,6 @@ We will evaluate the clustering effectiveness using:
    pip install -r requirements.txt
    ```
 
-## Usage Guide
-After installation, execute the main script:
-```bash
-python main.py
-```
-Adjust parameters in the config file as needed to refine clustering results.
-
 ## Results Summary
 The project aims to produce actionable insights about customer segments, leading to better-targeted marketing strategies and enhanced customer satisfaction.
 
