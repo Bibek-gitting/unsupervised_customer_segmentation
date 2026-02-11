@@ -1,34 +1,56 @@
 # Unsupervised Customer Segmentation
 
-This project performs unsupervised customer segmentation using various clustering techniques. The primary aim is to group customers into segments based on purchasing behavior to enable targeted marketing strategies.
+## Project Overview
+This repository presents an unsupervised methodology for customer segmentation utilizing various clustering algorithms to gain insights into customer behavior and preferences.
 
-## Findings
-The clustering analysis identified 4 distinct customer segments:
-1. **High-Value Customers**: These customers have a high frequency of purchases and high average order values.
-2. **Occasional Shoppers**: Customers in this group make infrequent purchases but tend to buy high-ticket items when they do.
-3. **Regular Buyers**: This segment consists of customers who buy consistently over time, with moderate order values.
-4. **Bargain Hunters**: Customers looking for discounts, usually purchasing lower-ticket items.
+## Features
+- **Data Preprocessing:** Handle missing values, categorical encodings, and normalization.
+- **Clustering Algorithms:** Implement K-means, Hierarchical clustering, and DBSCAN.
+- **Visualizations:** Generate informative plots to analyze and interpret clusters.
+- **Performance Metrics:** Evaluate clustering results using silhouette scores and other metrics.
+
+## Methodology
+The project leverages historical data to segment customers into distinct groups using unsupervised learning techniques.
+
+## Clustering Algorithms
+- **K-means:** Partitions data into k distinct clusters based on distance to the centroid.
+- **Hierarchical Clustering:** Builds a hierarchy of clusters using agglomerative methods.
+- **DBSCAN:** Groups together points that are closely packed and marks points lying alone in low-density regions as outliers.
+
+## Visualizations
+Visual representations will include:
+- Scatter plots of clusters
+- Dendrograms for hierarchical clustering
+- Elbow method results for optimal k in K-means
 
 ## Metrics
-- **Silhouette Score**: Measures how similar an object is to its own cluster compared to other clusters (average score: 0.58).
-- **Inertia**: Sum of squared distances of samples to their closest cluster center (common value found: 2100).
+We will evaluate the clustering effectiveness using:
+- Silhouette Score
+- Davies–Bouldin Index
 
-## Libraries Used
-- **NumPy**: For numerical calculations.
-- **Pandas**: For data manipulation and analysis.
-- **Scikit-learn**: For clustering algorithms and metrics.
-- **Matplotlib** and **Seaborn**: For visualization of clusters and metrics.
+## Installation Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Bibek-gitting/unsupervised_customer_segmentation.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd unsupervised_customer_segmentation
+   ```
+3. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Code Outputs
-- The clustering visualization shows distinct separations between customer segments:
-  ![Clustering Output](outputs/clustering_visualization.png)
-
-- Further analysis on metrics: 
-```python
-from sklearn.metrics import silhouette_score
-silhouette_avg = silhouette_score(data, labels)
-print("Silhouette Score: ", silhouette_avg)
+## Usage Guide
+After installation, execute the main script:
+```bash
+python main.py
 ```
+Adjust parameters in the config file as needed to refine clustering results.
 
-## Conclusion
-This project demonstrates how unsupervised learning techniques can effectively be leveraged for customer segmentation, providing insights into buying behaviors that can help businesses improve marketing strategies.
+## Results Summary
+The project aims to produce actionable insights about customer segments, leading to better-targeted marketing strategies and enhanced customer satisfaction.
+
+## Contribution Guidelines
+Contributions are welcome! Please fork the repository and submit a pull request with your changes. Ensure you follow standard coding conventions and include relevant tests for new features.
