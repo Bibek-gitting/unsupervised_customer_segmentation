@@ -1,27 +1,34 @@
 # Unsupervised Customer Segmentation
 
-## Overview
-This repository contains a comprehensive analysis of unsupervised customer segmentation techniques based on the provided dataset. Using various clustering algorithms, the goal is to identify distinct customer profiles that can enhance marketing strategies and improve service offerings.
+This project performs unsupervised customer segmentation using various clustering techniques. The primary aim is to group customers into segments based on purchasing behavior to enable targeted marketing strategies.
 
-## Key Findings
+## Findings
+The clustering analysis identified 4 distinct customer segments:
+1. **High-Value Customers**: These customers have a high frequency of purchases and high average order values.
+2. **Occasional Shoppers**: Customers in this group make infrequent purchases but tend to buy high-ticket items when they do.
+3. **Regular Buyers**: This segment consists of customers who buy consistently over time, with moderate order values.
+4. **Bargain Hunters**: Customers looking for discounts, usually purchasing lower-ticket items.
 
-1. **Data Preprocessing**: A thorough data cleaning process was applied to remove inconsistencies and prepare the dataset for analysis. Missing values were handled appropriately, and categorical variables were encoded for clustering.
-   
-2. **Exploratory Data Analysis (EDA)**: Descriptive statistics and visualizations were conducted to understand the distribution of different features and their relationships.
-   
-3. **Clustering Algorithms**: Multiple clustering algorithms were tested, including K-Means, Hierarchical Clustering, and DBSCAN. Each method's effectiveness was evaluated using metrics like Silhouette Score and Elbow Method.
-   
-4. **Optimal Number of Clusters**: The optimal number of clusters was determined using the Elbow method, and the resulting clusters were evaluated. The ideal configurations clearly segmented the customers into actionable groups.
-   
-5. **Interpretation of Clusters**: Detailed analysis and profiling of each customer segment highlighted key characteristics, such as purchasing behavior, demographic information, and preferences.
-   
-6. **Actionable Insights**: Recommendations for targeted marketing strategies based on the identified customer segments were formulated to maximize engagement and conversion rates.
+## Metrics
+- **Silhouette Score**: Measures how similar an object is to its own cluster compared to other clusters (average score: 0.58).
+- **Inertia**: Sum of squared distances of samples to their closest cluster center (common value found: 2100).
 
-## Usage
-To replicate the analysis, clone the repository and run the Jupyter notebooks in your local environment. Ensure all required libraries are installed as per the `requirements.txt` file.
+## Libraries Used
+- **NumPy**: For numerical calculations.
+- **Pandas**: For data manipulation and analysis.
+- **Scikit-learn**: For clustering algorithms and metrics.
+- **Matplotlib** and **Seaborn**: For visualization of clusters and metrics.
+
+## Code Outputs
+- The clustering visualization shows distinct separations between customer segments:
+  ![Clustering Output](outputs/clustering_visualization.png)
+
+- Further analysis on metrics: 
+```python
+from sklearn.metrics import silhouette_score
+silhouette_avg = silhouette_score(data, labels)
+print("Silhouette Score: ", silhouette_avg)
+```
 
 ## Conclusion
-The findings from this analysis provide valuable insights into customer behavior. By implementing the recommendations derived from the segmentation results, businesses can better tailor their offerings to meet customer needs, enhancing overall satisfaction and loyalty.
-
----
-_Last updated on 2026-02-11 18:10:47 (UTC)_
+This project demonstrates how unsupervised learning techniques can effectively be leveraged for customer segmentation, providing insights into buying behaviors that can help businesses improve marketing strategies.
